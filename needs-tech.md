@@ -13,4 +13,5 @@ Scenario: Reconcile counts if the sensor is offline for a while
   Given : Sensor stores the recent count values in pointers before shutdown,
   manual logging done when sensor goes offline.
   When : Sensor restarts.
-  Then : Manually increment counters with present values, switch it to automatic mode.
+  Then : Manually increment counters with present values, switch it to
+  automatic mode.
