@@ -13,7 +13,7 @@ Scenario: Report visitor trends during a week of operation
 Scenario: Alert when seating capacity is full
 
   Given : Seatings meant for visitors alone, entry-card issuer
-  sensor type, visitors-exit log maintained. 
+  sensor type, visitors-exit log maintained.
   When : every 15 minutes.
   Then : increment visit-counter after an entry, decrement exit-counter
   after an exit, subtract both every 15 minutes and check with maximum
