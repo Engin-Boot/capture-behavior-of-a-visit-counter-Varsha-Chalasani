@@ -7,8 +7,8 @@ Scenario: Show patient visits during working days and holidays
   
   When: Patient enters.
   
-  Then : Sensor identifies as patient, , Issues a card specific to
-  the patient, increments the patient-visit-counter.
+  Then : Sensor identifies as patient, Issues a card specific to
+  the patient, increments the patient-visit-counter. Display trend.
 
 Scenario: Compute parking slots to reserve for visiting specialists
 
