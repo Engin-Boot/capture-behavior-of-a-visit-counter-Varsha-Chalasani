@@ -14,9 +14,10 @@ Scenario: Report visitor trends during a week of operation
 Scenario: Alert when seating capacity is full
 
   Given : Seating meant for visitors alone, entry-card issuer
-  sensor type, visitors-exit log maintained.
+  sensor type, visitors-exit log maintained. compute present
+  count using entry and exit logs and check with maximum
+  seat capacity. Maximum city capacity filled.
   
   When : every 15 minutes.
   
-  Then : compute present count using entry and exit logs and check with maximum
-  seat capacity. If exceeds, trigger an alert.
+  Then : trigger an alert.
