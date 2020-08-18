@@ -8,7 +8,7 @@ that runs the visit-counter
   
   When : Server restarts.
   
-  Then : Manually increment counter with present value, switch it to automatic mode.
+  Then : Update the server counter.
 
 Scenario: Reconcile counts if the sensor is offline for a while
 
@@ -17,5 +17,4 @@ Scenario: Reconcile counts if the sensor is offline for a while
   
   When : Sensor restarts.
   
-  Then : Manually increment counters with present values, switch it to
-  automatic mode.
+  Then : Update sensor counter
