@@ -12,11 +12,9 @@ Scenario: Show patient visits during working days and holidays
 
 Scenario: Compute parking slots to reserve for visiting specialists
 
-  Given : Entry-card issuer type sensor, differentiates visiting
-  doctors from relatives, patients. we have a week's trend.
+  Given : Entry-card issuer type sensor, we have a week's trend.
   
-  When : Visiting doctor enters.
+  When : day beginning.
   
-  Then : Sensor identifies as a visiting doctor, issues an entry card,
-  increments visiting-doctor-counter. Computes average number of visits.
+  Then : Computes average number of visits per day.
   Reserve parking lots.
