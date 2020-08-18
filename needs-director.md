@@ -19,3 +19,4 @@ Scenario: Compute parking slots to reserve for visiting specialists
   
   Then : Sensor identifies as a visiting doctor, issues an entry card,
   increments visiting-doctor-counter. Computes average number of visits.
+  Reserve parking lots.
