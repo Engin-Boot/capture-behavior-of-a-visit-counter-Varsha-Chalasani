@@ -7,7 +7,7 @@ Scenario: Show patient visits during working days and holidays
   
   When: Patient enters.
   
-  Then : increments the patient-visit-counter. 
+  Then : increments the patient-visit-counter.
 
 Scenario: Compute parking slots to reserve for visiting specialists
 
