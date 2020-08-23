@@ -2,18 +2,19 @@
 
 Scenario: Show patient visits during working days and holidays
 
-  Given: Entry-card issuer type sensor, works throughout the week,
-  differentiates patients from relatives, visiting doctors
+  Given: Entry-card issuer type sensor
+  And works throughout the week
+  And sensor counts patient visits
   
-  When: Patient enters.
+  When: director requests report
   
-  Then : increments the patient-visit-counter.
+  Then : shows patient visits
 
 Scenario: Compute parking slots to reserve for visiting specialists
 
-  Given : Entry-card issuer type sensor, we have a week's visit trends,
-  visiting doctor's schedule.
+  Given : Entry-card issuer type sensor
+  And sufficient visiting trends of doctors
   
   When : Before doctor visits.
   
-  Then :  Computes average number of visits per day. Reserve parking lots.
+  Then : Reserve parking lots.
