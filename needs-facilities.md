@@ -2,10 +2,10 @@
 
 Scenario: Report visitor trends during a week of operation
 
-  Given : Entry-card issuer type sensor,
-  sensor differentiates among patients, relatives and visiting doctors.
-  Separate counters maintained for different types of visitors.
-  Reset counter everyday.
+  Given : Entry-card issuer type sensor
+  And sensor differentiates among patients, relatives and visiting doctors
+  And separate counters maintained for different types of visitors.
+  And counter reset everyday.
   
   When : asked for report.
   
@@ -13,11 +13,12 @@ Scenario: Report visitor trends during a week of operation
 
 Scenario: Alert when seating capacity is full
 
-  Given : Seating meant for visitors alone, entry-card issuer
-  sensor type, visitors-exit log maintained. compute present
-  count using entry and exit logs and check with maximum
-  seat capacity. Maximum city capacity filled.
+  Given : Seating meant for visitors alone
+  And entry-card issuer sensor type
+  And visitors-exit log maintained. 
+  And compute present count using entry and exit logs and
+  check with maximum seat capacity.
   
-  When : every 15 minutes.
+  When : seat capacity filled
   
   Then : trigger an alert.
