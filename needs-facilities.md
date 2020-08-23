@@ -15,7 +15,7 @@ Scenario: Alert when seating capacity is full
 
   Given : Seating meant for visitors alone
   And entry-card issuer sensor type
-  And visitors-exit log maintained. 
+  And visitors-exit log maintained.
   And compute present count using entry and exit logs and
   check with maximum seat capacity.
   
